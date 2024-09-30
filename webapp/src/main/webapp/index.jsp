@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>Hi Wre are learninig Devops and it's awesome because it's me Prakhar. Thank you all</h1>
-    <h1>Hi Wre are learninig Devops and it's awesome because it's me Prakhar. Thank you all</h1>
+    <h1>Hi Wre are learninig Devops and it's awesome because it's me Prakhar.</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
