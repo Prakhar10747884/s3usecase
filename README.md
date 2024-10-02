@@ -124,8 +124,8 @@ on:
     branches: [ main ]
 
 env:
-  ECR_REPOSITORY: git-repo
-  EKS_CLUSTER_NAME: jitendra-cluster 
+  ECR_REPOSITORY: my-repo
+  EKS_CLUSTER_NAME: my-cluster 
   AWS_REGION: ap-south-1
 
 jobs:
