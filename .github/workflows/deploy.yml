@@ -6,8 +6,8 @@ on:
     branches: [ main ]
 
 env:
-  ECR_REPOSITORY: eksrepo
-  EKS_CLUSTER_NAME: my-cluster 
+  ECR_REPOSITORY: dockerrepo
+   
   AWS_REGION: ap-south-1
   IMAGE_TAG: latest
 
@@ -62,12 +62,4 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest -f Dockerfile .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
-    - name: Update kube config
-      run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
-
-    - name: Deploy to EKS
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}        
-        IMAGE_TAG: ${{ steps.commit.outputs.short }}
-      run: |
-        kubectl rollout restart deployment/regapp-deployment
+    
