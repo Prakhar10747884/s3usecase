@@ -8,7 +8,7 @@ on:
 env:
   ECR_REPOSITORY: myecr
    
-  AWS_REGION: ap-southeast-1
+  AWS_REGION: ap-east-2
   IMAGE_TAG: latest
 
 jobs:
